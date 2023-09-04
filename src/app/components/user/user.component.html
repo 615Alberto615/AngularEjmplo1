@@ -1,0 +1,35 @@
+<!-- user.component.html -->
+
+<h2>Lista de Usuarios</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Nombre de Usuario</th>
+      <th>Email</th>
+      <th>Ciudad</th>
+      <th>Teléfono</th>
+      <th>Website</th>
+      <th>Empresa</th>
+      <th>Acciones</th> <!-- Nueva columna -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.address.city }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.website }}</td>
+      <td>{{ user.company.name }}</td>
+      <td>
+        <button >Actualizar</button>
+        <button >Eliminar</button>
+      </td> 
+    </tr>
+  </tbody>
+</table>
